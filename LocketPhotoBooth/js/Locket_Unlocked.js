@@ -1,4 +1,4 @@
-var LOCKET_WIDGET_FRAME_URL = "https://i.ibb.co/TDzZcsNT/totoro.png";
+var LOCKET_WIDGET_FRAME_URL = "https://i.ibb.co/ZpdFxxQR/IMG-2111.png";
 var LOCKET_WIDGET_FRAME_UID = "custom_33af336e9017a9e1";
 // ============================================================
 // Locket Remote Config Rewrite
