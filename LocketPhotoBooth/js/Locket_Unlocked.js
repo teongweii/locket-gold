@@ -1,5 +1,3 @@
-var LOCKET_WIDGET_FRAME_URL = "https://i.ibb.co/ZpdFxxQR/IMG-2111.png";
-var LOCKET_WIDGET_FRAME_UID = "custom_img2111_frame";
 // ============================================================
 // Locket Remote Config Rewrite
 // Endpoint: firebaseremoteconfig.googleapis.com
@@ -51,13 +49,13 @@ if (ua.includes("Locket")) {
             profile_banner: true
         }),
         feature_discovery_popup_config: JSON.stringify({
-            tag: "LOCKET GOLD",
+            tag: "LOCKET GOLD SORA",
             tag_gradient: true,
             tag_style: "gold_gradient",
             title: "Locket lên Gold rồi nha 👀",
             feature_set: [
                 {
-                    title: "Locket Phú Trọng ✨",
+                    title: "Locket Sora ✨",
                     body: "Vũ trụ là những câu thơ, nơi có u n i 💛",
                     imageURL: "https://cdn.jsdelivr.net/gh/miss-lanho/locket-gold@main/module/LocketKuromi.png"
                 }
@@ -733,13 +731,15 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
         widget_frame_event: JSON.stringify({
-            uid: customFrameId,
-            url: customFrameUrl,
+            uid: typeof LOCKET_WIDGET_FRAME_UID === "string" ? LOCKET_WIDGET_FRAME_UID : "blank",
+            // url: "https://i.ibb.co/vC8b93Ld/ig.png",
+            url: typeof LOCKET_WIDGET_FRAME_URL === "string" ? LOCKET_WIDGET_FRAME_URL : "https://i.ibb.co/ZpdFxxQR/IMG-2111.png",
+            // url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
             use_local_time_zone: true,
             placement: "below",
             start_at: "2020-01-01T00:00:00",
             end_at: "2099-12-31T23:59:59",
-            custom_widget_frames: [customFrameUrl],
+            custom_widget_frames: [],
         }),
         live_activity_onboarding: "true",
         live_activity_onboarding_variant: "setup_ready_on_background",
@@ -883,8 +883,9 @@ if (ua.includes("Locket")) {
             {
                 section: "🎨 Decorative by Duy Vinh",
                 items: [
-                    { overlay_id: "caption:phutrong07", source: "remote", caption: { background: { colors: ["#B8E7FF", "#A8F5D0", "#DCCBFF"] }, effect: "snow", icon: { data: "tortoise.fill", type: "sf_symbol", color: "#183153" }, max_lines: 1, text: "phutrong07", text_color: "#183153", type: "static_content" } },
+                    { overlay_id: "caption:duyvinh09", source: "remote", caption: { background: { colors: ["#B8E7FF", "#A8F5D0", "#DCCBFF"] }, effect: "snow", icon: { data: "tortoise.fill", type: "sf_symbol", color: "#183153" }, max_lines: 1, text: "duyvinh09", text_color: "#183153", type: "static_content" } },
                     // { overlay_id: "caption:vu", source: "remote", caption: { background: { colors: ["#FFB6C1", "#FF69B4", "#FFC0CB"] }, icon: { data: "crown.fill", type: "sf_symbol", color: "#183153" }, max_lines: 1, text: "Vũ Bá Khí", text_color: "#183153", type: "static_content" } },
+                    { overlay_id: "caption:cu", source: "remote", caption: { background: { colors: ["#FFD6A5", "#FFF1A8", "#FFC4D6"] }, max_lines: 1, text: "Cu 🐎", text_color: "#633B24", type: "static_content" } },
                     { overlay_id: "caption:tuat", source: "remote", caption: { background: { colors: ["#2C1A0E", "#5D4037", "#D7A86E"] }, icon: { data: "🐕", type: "emoji" }, max_lines: 1, text: "Tuất", text_color: "#FFFFFFE6", type: "static_content" } },
                     { overlay_id: "caption:snake_vibes", source: "remote", caption: { background: { colors: ["#2E7D32", "#66BB6A"] }, icon: { data: "🐍", type: "emoji" }, max_lines: 1, text: "Snake Vibes", localized_text: { en: "Snake Vibes", vn: "Chất rắn" }, text_color: "#FFFFFFE6", type: "static_content" } },
                     { overlay_id: "caption:du_an_ma", source: "remote", caption: { background: { colors: ["#263238", "#455A64"] }, icon: { data: "👻", type: "emoji" }, max_lines: 1, text: "dự án ma", text_color: "#FFFFFFE6", type: "static_content" } },
