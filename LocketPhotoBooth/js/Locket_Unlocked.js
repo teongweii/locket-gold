@@ -421,7 +421,7 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 8. OVERLAY & CUSTOM CAPTIONS
+    // 8. OVERLAY & CUSTOM CAPTIONS (KÈM GIÁNG SINH SAU HOLIDAY CAPTION)
     // ============================================================
     Object.assign(obj.entries, {
         overlay_navigator_enabled: "true",
@@ -786,6 +786,75 @@ if (ua.includes("Locket")) {
             },
         ])
     });
+
+    // ============================================================
+    // 8B. BỘ CAPTION GIÁNG SINH (ĐỨNG SAU HOLIDAY CAPTION)
+    // ============================================================
+    (function () {
+        var christmasDate = new Date("2026-12-25T00:00:00+07:00");
+        var hideAfterDate = new Date("2026-12-26T00:00:00+07:00");
+        var now = new Date();
+
+        if (now >= hideAfterDate) {
+            return;
+        }
+
+        var msPerDay = 1000 * 60 * 60 * 24;
+        var daysLeft = Math.max(0, Math.ceil((christmasDate.getTime() - now.getTime()) / msPerDay));
+        var countdownText = daysLeft > 0
+            ? ("Còn " + daysLeft + " ngày nữa là Noel")
+            : "Hôm nay là Noel rồi!";
+
+        var xmasSection = {
+            section: "🎄 Giáng Sinh 2026",
+            items: [
+                { overlay_id: "caption:xmas_countdown", source: "remote", caption: { background: { colors: ["#B71C1C", "#D32F2F"] }, icon: { data: "🎅🏻", type: "emoji" }, max_lines: 1, text: countdownText, text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_peace", source: "remote", caption: { background: { colors: ["#1B5E20", "#2E7D32"] }, icon: { data: "🎄", type: "emoji" }, max_lines: 1, text: "Giáng sinh an lành", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_merry", source: "remote", caption: { background: { colors: ["#8E0000", "#C62828"] }, icon: { data: "🎅🏻", type: "emoji" }, max_lines: 1, text: "Merry Christmas!", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_silent_night", source: "remote", caption: { background: { colors: ["#1A237E", "#3949AB"] }, icon: { data: "🌟", type: "emoji" }, max_lines: 1, text: "Đêm thánh vô cùng", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_warm", source: "remote", caption: { background: { colors: ["#5D4037", "#8D6E63"] }, icon: { data: "🕯️", type: "emoji" }, max_lines: 1, text: "Noel này thật ấm áp", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_wish", source: "remote", caption: { background: { colors: ["#F9A825", "#FFE082"] }, icon: { data: "🔔", type: "emoji" }, max_lines: 1, text: "Chúc mọi điều ước đều thành hiện thực", text_color: "#3E2723", type: "static_content" } },
+                { overlay_id: "caption:xmas_hoho", source: "remote", caption: { background: { colors: ["#C62828", "#EF5350"] }, icon: { data: "🦌", type: "emoji" }, max_lines: 1, text: "Ho ho ho, quà tới đây!", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_snow_heart", source: "remote", caption: { background: { colors: ["#BBDEFB", "#E3F2FD"] }, icon: { data: "❄️", type: "emoji" }, max_lines: 1, text: "Tuyết rơi trong lòng em rồi", text_color: "#0D47A1", type: "static_content" } },
+                { overlay_id: "caption:xmas_lights", source: "remote", caption: { background: { colors: ["#311B92", "#FF8F00"] }, icon: { data: "✨", type: "emoji" }, max_lines: 1, text: "Phố đã lên đèn, lòng đã lên mood", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_cocoa", source: "remote", caption: { background: { colors: ["#4E342E", "#A1887F"] }, icon: { data: "☕", type: "emoji" }, max_lines: 1, text: "Một ly cacao nóng và một cái ôm thật ấm", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_scarf", source: "remote", caption: { background: { colors: ["#B71C1C", "#E57373"] }, icon: { data: "🧣", type: "emoji" }, max_lines: 1, text: "Hội khăn len áo đỏ đã có mặt", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_church", source: "remote", caption: { background: { colors: ["#283593", "#5C6BC0"] }, icon: { data: "⛪", type: "emoji" }, max_lines: 1, text: "Đi nhà thờ ngắm người thương", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_winter_love", source: "remote", caption: { background: { colors: ["#006064", "#4DD0E1"] }, icon: { data: "🌨️", type: "emoji" }, max_lines: 1, text: "Đông về rồi, tình yêu về chưa?", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_gift_heart", source: "remote", caption: { background: { colors: ["#AD1457", "#F06292"] }, icon: { data: "🎁", type: "emoji" }, max_lines: 1, text: "Món quà đẹp nhất là người trong tim", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_need_him", source: "remote", caption: { background: { colors: ["#C2185B", "#F48FB1"] }, icon: { data: "🎀", type: "emoji" }, max_lines: 1, text: "Noel không cần quà, cần anh", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_santa_baby", source: "remote", caption: { background: { colors: ["#F48FB1", "#FCE4EC"] }, icon: { data: "🎀", type: "emoji" }, max_lines: 1, text: "Ông già Noel ơi, con xin một em bé đáng yêu", text_color: "#880E4F", type: "static_content" } },
+                { overlay_id: "caption:xmas_unwrap_me", source: "remote", caption: { background: { colors: ["#880E4F", "#EC407A"] }, icon: { data: "💌", type: "emoji" }, max_lines: 1, text: "Quà của em đây, bóc nhẹ tay nhé!", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_mistletoe", source: "remote", caption: { background: { colors: ["#1B5E20", "#66BB6A"] }, icon: { data: "🌿", type: "emoji" }, max_lines: 1, text: "Đứng dưới tầm gửi chờ ai đó", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_hold_hand", source: "remote", caption: { background: { colors: ["#37474F", "#90A4AE"] }, icon: { data: "🧤", type: "emoji" }, max_lines: 1, text: "Trời lạnh rồi, nắm tay không?", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_wish_you", source: "remote", caption: { background: { colors: ["#4A148C", "#AB47BC"] }, icon: { data: "🌟", type: "emoji" }, max_lines: 1, text: "Điều ước Noel: là cậu đó", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_solo", source: "remote", caption: { background: { colors: ["#90CAF9", "#E3F2FD"] }, icon: { data: "☃️", type: "emoji" }, max_lines: 1, text: "Noel một mình, quà khỏi chia ai", text_color: "#0D47A1", type: "static_content" } },
+                { overlay_id: "caption:xmas_salary_13", source: "remote", caption: { background: { colors: ["#1B5E20", "#F9A825"] }, icon: { data: "💸", type: "emoji" }, max_lines: 1, text: "Ông già Noel ơi, con xin tháng lương thứ 13", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_good_kid", source: "remote", caption: { background: { colors: ["#B71C1C", "#FF7043"] }, icon: { data: "😇", type: "emoji" }, max_lines: 1, text: "Năm nay con ngoan, trừ vài hôm hơi hư", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_deadline", source: "remote", caption: { background: { colors: ["#3949AB", "#7986CB"] }, icon: { data: "📚", type: "emoji" }, max_lines: 1, text: "Người ta có quà, mình có deadline", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_stocking", source: "remote", caption: { background: { colors: ["#BF360C", "#FF8A65"] }, icon: { data: "🧦", type: "emoji" }, max_lines: 1, text: "Treo tất rồi, quà đâu ạ?", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_saigon", source: "remote", caption: { background: { colors: ["#FB8C00", "#FFE082"] }, icon: { data: "🥵", type: "emoji" }, max_lines: 1, text: "Noel Sài Gòn: tuyết trong tủ lạnh", text_color: "#3E2723", type: "static_content" } },
+                { overlay_id: "caption:xmas_gingerbread", source: "remote", caption: { background: { colors: ["#4E342E", "#8D6E63"] }, icon: { data: "🍪", type: "emoji" }, max_lines: 1, text: "Bánh gừng trước, giảm cân sau", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_ootd", source: "remote", caption: { background: { colors: ["#880E4F", "#311B92"] }, icon: { data: "🕶️", type: "emoji" }, max_lines: 1, text: "OOTD đi chơi Noel", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_gang", source: "remote", caption: { background: { colors: ["#3E2723", "#FFB300"] }, icon: { data: "🥂", type: "emoji" }, max_lines: 1, text: "Noel năm nay vẫn đủ hội bạn mình", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_family", source: "remote", caption: { background: { colors: ["#33691E", "#8BC34A"] }, icon: { data: "🏡", type: "emoji" }, max_lines: 1, text: "Có gia đình là có Noel", text_color: "#FFFFFF", type: "static_content" } },
+                { overlay_id: "caption:xmas_pack_locket", source: "remote", caption: { background: { colors: ["#263238", "#78909C"] }, icon: { data: "📸", type: "emoji" }, max_lines: 1, text: "Gói Noel này vào một tấm Locket", text_color: "#FFFFFF", type: "static_content" } }
+            ]
+        };
+
+        var currentItems = JSON.parse(obj.entries.overlay_items || "[]");
+        var targetIndex = currentItems.findIndex(function (sec) {
+            return sec && typeof sec.section === "string" && sec.section.indexOf("Holiday Caption") !== -1;
+        });
+
+        if (targetIndex !== -1) {
+            currentItems.splice(targetIndex + 1, 0, xmasSection);
+        } else {
+            currentItems.unshift(xmasSection);
+        }
+
+        obj.entries.overlay_items = JSON.stringify(currentItems);
+    })();
 }
 
 $done({ body: JSON.stringify(obj) });
