@@ -51,13 +51,13 @@ if (ua.includes("Locket")) {
             profile_banner: true
         }),
         feature_discovery_popup_config: JSON.stringify({
-            tag: "LOCKET GOLD SORA",
+            tag: "LOCKET GOLD TEONGWEI",
             tag_gradient: true,
             tag_style: "gold_gradient",
             title: "Locket lên Gold rồi nha 👀",
             feature_set: [
                 {
-                    title: "Locket Sora ✨",
+                    title: "Locket Teongwei ✨",
                     body: "Vũ trụ là những câu thơ, nơi có u n i 💛",
                     imageURL: "https://cdn.jsdelivr.net/gh/miss-lanho/locket-gold@main/module/LocketKuromi.png"
                 }
